@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tfg/registro.dart';
+
 
 void main() => runApp(const MyApp());
 
@@ -12,8 +14,7 @@ class MyApp extends StatelessWidget {
       title: 'TFg',
       home: Scaffold(
         body: Padding(
-          padding:
-              const EdgeInsets.symmetric(horizontal: 20.0, vertical: 100.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 100.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -21,8 +22,7 @@ class MyApp extends StatelessWidget {
               Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text(
-                    "The Gourment Shake",
+                  Text("The Gourmet Shake",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color.fromARGB(255, 204, 167, 1),
@@ -42,7 +42,8 @@ class MyApp extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Registro()));
+                      Navigator.push (context, MaterialPageRoute(builder: (context) => registro()),
+                      );
                     },
                     child: Text(
                       'Iniciar Sesión',
@@ -62,9 +63,7 @@ class MyApp extends StatelessWidget {
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> Registro()));//faltan cosa por añadir a la ruta no esta funcionando
-                      
-                    },
+                       Navigator.push(context,MaterialPageRoute(builder: (context) => registro()));     },
                     child: Text(
                       'Registrarse',
                       style: TextStyle(color: Colors.white),
@@ -77,28 +76,12 @@ class MyApp extends StatelessWidget {
                         borderRadius: BorderRadius.circular(30),
                       ),
                     ),
-                  )
+                  ),
                 ],
-              )
+              )//hola que tal estamos
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class Registro extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // Aquí puedes construir la pantalla de registro
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Registro'),
-      ),
-      body: Center(
-        child: Text('Pantalla de Registro'),
-        
       ),
     );
   }

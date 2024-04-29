@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+//parte de registro
+void main() => runApp(const registro());
 
-void main() => runApp(const MyApp());
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class registro extends StatelessWidget {
+  const registro({super.key});
 
   @override
   Widget build(BuildContext context) {
