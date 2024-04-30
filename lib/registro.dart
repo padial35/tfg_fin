@@ -8,15 +8,17 @@ class registro extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Registro',
+      debugShowCheckedModeBanner: false,
+      title: 'Registro de Usuarios',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Registro'),
+          title: const Text('Registro de Usuarios'),
+          centerTitle: true,
+          
+          
+
         ),
-        body: const Center(
-          child: Text('Hello World'),
         ),
-      ),
-    );
+      );
   }
 }
