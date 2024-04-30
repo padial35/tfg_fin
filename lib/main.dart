@@ -30,7 +30,8 @@ class MyHomePage extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text("The Gourmet Shake",
+                Text(
+                  "The Gourmet Shake",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color.fromARGB(255, 204, 167, 1),
@@ -55,7 +56,8 @@ class MyHomePage extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => MyAppInicio()),
                     );
                   },
-                  child: Text( 'Inicio de Sesión',
+                  child: Text(
+                    'Inicio de Sesión',
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -77,7 +79,8 @@ class MyHomePage extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => registro()),
                     );
                   },
-                  child: Text('Registro',
+                  child: Text(
+                    'Registro',
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
