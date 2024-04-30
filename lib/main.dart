@@ -50,12 +50,12 @@ class MyHomePage extends StatelessWidget {
               children: [
                 ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,MaterialPageRoute(builder: (context) => registro())
-                    );
-                    Navigator.push(context,MaterialPageRoute(builder: (context)=> inicioSesion())
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyAppInicio()),
                     );
                   },
-                  child: Text('Iniciar Sesión',
+                  child: Text( 'Inicio de Sesión',
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -77,7 +77,7 @@ class MyHomePage extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => registro()),
                     );
                   },
-                  child: Text('Registrarse',
+                  child: Text('Registro',
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
