@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:tfg/main.dart';
 
 void main() => runApp(const Registro());
 
@@ -13,25 +13,79 @@ class Registro extends StatelessWidget {
       title: 'Registro de Usuarios',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Registro de Usuarios'),
+          title: Text(
+            'Registro de Usuarios',
+            style: TextStyle(
+              fontFamily: "PlayfairDisplay",
+              fontSize: 28,
+            ),
+          ),
           centerTitle: true,
         ),
-        body: Column(
-          children: [
-            TextFieldNombre(),
-            TextFieldCorreo(),
-            TextFieldContrasena(),
-            TextFieldTelef(),
-            TextFieldCpos(),
-          ],
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextFieldNombre(),
+              TextFieldCorreo(),
+              TextFieldContrasena(),
+              TextFieldTelef(),
+              TextFieldCpos(),
+              SizedBox(height: 80),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => MyApp()),
+                  );
+                },
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    'Guardar',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  backgroundColor: Color.fromARGB(255, 204, 167, 1),
+                  minimumSize: Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> MyApp())); // Utiliza Navigator.pop para volver a la pantalla anterior
+                },
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  child: Text('Volver',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 20),
+                  backgroundColor: Color.fromARGB(255, 204, 167, 1),
+                  minimumSize: Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
+
 class TextFieldNombre extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
@@ -50,8 +104,9 @@ class TextFieldNombre extends StatelessWidget {
     );
   }
 }
+
 class TextFieldCorreo extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
@@ -72,7 +127,7 @@ class TextFieldCorreo extends StatelessWidget {
 }
 
 class TextFieldContrasena extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
@@ -93,7 +148,7 @@ class TextFieldContrasena extends StatelessWidget {
 }
 
 class TextFieldTelef extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
@@ -114,7 +169,7 @@ class TextFieldTelef extends StatelessWidget {
 }
 
 class TextFieldCpos extends StatelessWidget {
-  @override 
+  @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
@@ -133,6 +188,3 @@ class TextFieldCpos extends StatelessWidget {
     );
   }
 }
-
-
-

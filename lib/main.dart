@@ -56,8 +56,7 @@ class MyHomePage extends StatelessWidget {
                       MaterialPageRoute(builder: (context) => MyAppInicio()),
                     );
                   },
-                  child: Text(
-                    'Inicio de Sesión',
+                  child: Text('Inicio de Sesión',
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
