@@ -12,7 +12,7 @@ class MyAppInicio extends StatelessWidget {
       title: 'Material App',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Inicio Sesión'),
+          title: const Text('Iniciar Sesión'),
           centerTitle: true,
         ),
         body: const Center(
