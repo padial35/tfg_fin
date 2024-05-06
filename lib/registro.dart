@@ -1,7 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:tfg/main.dart';
 
-void main() => runApp(const Registro());
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Mi Aplicación',
+      home: Registro(),
+    );
+  }
+}
 
 class Registro extends StatelessWidget {
   const Registro({Key? key});
@@ -34,10 +48,7 @@ class Registro extends StatelessWidget {
               SizedBox(height: 80),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => MyApp()),
-                  );
+                  // Aquí puedes realizar alguna acción de guardar
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
@@ -58,7 +69,7 @@ class Registro extends StatelessWidget {
               SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=> MyApp())); // Utiliza Navigator.pop para volver a la pantalla anterior
+                  Navigator.of(context).pop(); // Volver a la pantalla anterior
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
