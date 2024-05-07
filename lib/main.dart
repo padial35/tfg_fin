@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
                   "The Gourmet Shake",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Color.fromARGB(255, 204, 167, 1),
+                    color: Color.fromARGB(255, 199, 163, 0),
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'PlayfairDisplay',

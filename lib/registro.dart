@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'package:flutter/material.dart';
-
 void main() {
   runApp(MyApp());
 }
@@ -59,7 +56,7 @@ class Registro extends StatelessWidget {
                 ),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 20),
-                  backgroundColor: Color.fromARGB(255, 204, 167, 1),
+                  backgroundColor: Color.fromARGB(255, 204, 167, 0),
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
