@@ -66,7 +66,7 @@ class Registro extends StatelessWidget {
               SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pop(); // Volver a la pantalla anterior
+                  Navigator.of(context).pop(); 
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
@@ -76,7 +76,7 @@ class Registro extends StatelessWidget {
                 ),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 20),
-                  backgroundColor: Color.fromARGB(255, 204, 167, 1),
+                  backgroundColor: Color(0xFFC7BE00),
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),

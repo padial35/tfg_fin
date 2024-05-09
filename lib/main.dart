@@ -34,7 +34,7 @@ class MyHomePage extends StatelessWidget {
                   "The Gourmet Shake",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Color.fromARGB(255, 199, 163, 0),
+                    color: Color(0xFFC7BE00),
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
                     fontFamily: 'PlayfairDisplay',
@@ -60,7 +60,7 @@ class MyHomePage extends StatelessWidget {
                     style: TextStyle(color: Colors.white),
                   ),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Color.fromARGB(255, 204, 167, 1),
+                    backgroundColor: Color(0xFFC7BE00),
                     padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
                     minimumSize: Size(double.infinity, 50),
                     shape: RoundedRectangleBorder(

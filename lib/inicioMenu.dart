@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(MyApp(key: UniqueKey())); 
 
 class MyApp extends StatelessWidget {
-  final Key key; // 
+  final Key key;
 
   MyApp({required this.key}) : super(key: key);
 
@@ -11,19 +11,22 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Items',
+      title: 'Inicio',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Items'),
+          title: const Text('Inicio'),
         ),
         body: const Center(
-          child: Text('Items'),
+          child: Text('Inicio'),
         ),
+  
         bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: Color.fromARGB(200, 123, 123, 1), 
-          items: [
+          type: BottomNavigationBarType.fixed,
+          backgroundColor:Color(0xFFC7BE00),
+          unselectedItemColor: Colors.grey,
+          items: [  
             BottomNavigationBarItem(
-              icon: Icon(Icons.home),label: 'Inicio',
+              icon: Icon(Icons.home), label: 'Inicio',
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.shopping_cart), label: 'Compras',
