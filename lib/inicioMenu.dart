@@ -38,19 +38,19 @@ class _MyAppState extends State<MyApp> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Acción para el segundo botón
+                  // Acción
                 },
                 child: Text('Botón 2'),
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Acción para el tercer botón
+                  // Acción 
                 },
                 child: Text('Botón 3'),
               ),
               ElevatedButton(
                 onPressed: () {
-                  // Acción para el cuarto botón
+                  // Acción
                 },
                 child: Text('Botón 4'),
               ),
@@ -58,7 +58,6 @@ class _MyAppState extends State<MyApp> {
           ),
         ),
         bottomNavigationBar: Theme(
-         
           data: Theme.of(context).copyWith(
             bottomNavigationBarTheme: BottomNavigationBarThemeData(
               unselectedItemColor: Colors.blue[300], 
@@ -74,25 +73,28 @@ class _MyAppState extends State<MyApp> {
             items: [
               BottomNavigationBarItem(
                 icon: Icon(Icons.home),
-                label: 'Inicio',
-                activeIcon: Icon(Icons.settings, color: Colors.blue[700]),
+                label: ' ',
+                activeIcon: Icon(Icons.home, color: Colors.blue[700]),//el icono cambia cuando pulso
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.shopping_cart),
-                label: 'Compras',
-                activeIcon: Icon(Icons.settings, color: Colors.blue[700]),
+                icon: Icon(Icons.store),
+                label:' ',
+                activeIcon: Icon(Icons.store, color: Colors.blue[700]),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.cloud),
-                label: 'Datos',
-                activeIcon: Icon(Icons.settings, color: Colors.blue[700]),
-                
+                icon: Icon(Icons.restaurant),
+                label: ' ',
+                activeIcon: Icon(Icons.restaurant, color: Colors.blue[700]),          
               ),
               BottomNavigationBarItem(
-
-                icon: Icon(Icons.settings),
-                label: 'Ajustes',
-                activeIcon: Icon(Icons.settings, color: Colors.blue[700]) ,
+                icon: Icon(Icons.local_shipping),
+                label: ' ',
+                activeIcon: Icon(Icons.local_shipping, color: Colors.blue[700]) ,
+              ),
+               BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: '  ',
+                activeIcon: Icon(Icons.person, color: Colors.blue[700]) ,
                 
               ),
             ],
