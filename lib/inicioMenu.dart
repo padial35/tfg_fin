@@ -21,46 +21,117 @@ class _MyAppState extends State<MyApp> {
       title: 'Inicio',
       home: Scaffold(
         appBar: AppBar(
-          title: const Text('Inicio'),
+          title: const Text(
+            'Inicio',
+            style: TextStyle(
+              fontFamily: 'PlayfairDisplay',
+              color: Color.fromARGB(255, 20, 104, 188),
+              fontSize: 50,
+            ),
+          ),
+          toolbarHeight: 100,
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            
-            children: [
-              
-              ElevatedButton(
-                
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
-                child: Text('Volver'),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 20.0),
+          child: GridView.count(
+            crossAxisCount: 2,
+            children: <Widget>[
+              Card(
+                color: Colors.blue[300],
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Expanded(
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue[400],
+                              foregroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Text("Almacen"),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  // Acción
-                },
-                child: Text('Botón 2'),
+              Card(
+                color: Colors.blue[300],
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Expanded(
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue[400],
+                              foregroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Text("Platos"),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  // Acción 
-                },
-                child: Text('Botón 3'),
+              Card(
+                color: Colors.blue[300],
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Expanded(
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue[400],
+                              foregroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Text("Empleados"),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
-              ElevatedButton(
-                onPressed: () {
-                  // Acción
-                },
-                child: Text('Botón 4'),
+              Card(
+                color: Colors.blue[300],
+                child: Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Expanded(
+                        child: Center(
+                          child: ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue[400],
+                              foregroundColor: Colors.white,
+                            ),
+                            onPressed: () {},
+                            child: Text("Proveedores"),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             ],
           ),
         ),
         bottomNavigationBar: Theme(
           data: Theme.of(context).copyWith(
-            bottomNavigationBarTheme: BottomNavigationBarThemeData(
-              unselectedItemColor: Colors.blue[300], 
+            canvasColor: Colors.white,
+            textTheme: Theme.of(context).textTheme.copyWith(
+              caption: TextStyle(color: Colors.grey),
             ),
           ),
           child: BottomNavigationBar(
@@ -72,30 +143,29 @@ class _MyAppState extends State<MyApp> {
             },
             items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: Icon(Icons.home, color: Colors.blue[300]),
                 label: ' ',
-                activeIcon: Icon(Icons.home, color: Colors.blue[700]),//el icono cambia cuando pulso
+                activeIcon: Icon(Icons.home, color: Colors.blue[700]),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.store),
-                label:' ',
+                icon: Icon(Icons.store, color: Colors.blue[300]),
+                label: ' ',
                 activeIcon: Icon(Icons.store, color: Colors.blue[700]),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.restaurant),
+                icon: Icon(Icons.restaurant, color: Colors.blue[300]),
                 label: ' ',
-                activeIcon: Icon(Icons.restaurant, color: Colors.blue[700]),          
+                activeIcon: Icon(Icons.restaurant, color: Colors.blue[700]),
               ),
               BottomNavigationBarItem(
-                icon: Icon(Icons.local_shipping),
+                icon: Icon(Icons.local_shipping, color: Colors.blue[300]),
                 label: ' ',
-                activeIcon: Icon(Icons.local_shipping, color: Colors.blue[700]) ,
+                activeIcon: Icon(Icons.local_shipping, color: Colors.blue[700]),
               ),
-               BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: '  ',
-                activeIcon: Icon(Icons.person, color: Colors.blue[700]) ,
-                
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person, color: Colors.blue[300]),
+                label: ' ',
+                activeIcon: Icon(Icons.person, color: Colors.blue[700]),
               ),
             ],
           ),
