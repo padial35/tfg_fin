@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'alimentos.dart'; // Importa la página de alimentos.dart
+import 'alimentos.dart';
 
 void main() => runApp(MyApp());
 
@@ -65,7 +65,7 @@ class InicioMenu extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    AlimentosGridPage(), // Navega hacia alimentos.dart
+                                    AlimentosGrid(), // Navega hacia alimentos.dart
                               ),
                             );
                           },
@@ -77,7 +77,96 @@ class InicioMenu extends StatelessWidget {
                 ),
               ),
             ),
-            // Otros botones de la cuadrícula...
+            Card(
+              color: Colors.blue[400],
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Expanded(
+                      child: Center(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue[300],
+                            foregroundColor: Colors.white,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    AlimentosGrid(), 
+                              ),
+                            );
+                          },
+                          child: Text("Platos"),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              color: Colors.blue[400],
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Expanded(
+                      child: Center(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue[300],
+                            foregroundColor: Colors.white,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    AlimentosGrid(), 
+                              ),
+                            );
+                          },
+                          child: Text("Proveedores"),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Card(
+              color: Colors.blue[400],
+              child: Center(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    Expanded(
+                      child: Center(
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.blue[300],
+                            foregroundColor: Colors.white,
+                          ),
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) =>
+                                    AlimentosGrid(),
+                              ),
+                            );
+                          },
+                          child: Text("Personal"),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
