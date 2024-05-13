@@ -65,7 +65,7 @@ class InicioMenu extends StatelessWidget {
                               context,
                               MaterialPageRoute(
                                 builder: (context) =>
-                                    AlimentosGrid(), // Navega hacia alimentos.dart
+                                    AlimentosGridPage(), // Navega hacia alimentos.dart
                               ),
                             );
                           },
