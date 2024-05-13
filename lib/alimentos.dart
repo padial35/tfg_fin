@@ -1,45 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:tfg/NavBar.dart';
 
 void main() => runApp(MaterialApp(
-      home: Scaffold(
-        drawer: NavBar(),
-        appBar: AppBar(
-          title: Text(
-            'Items',
-            style: TextStyle(
-              fontSize: 40,
-            ),
-          ),
-          centerTitle: true,
-        ),
-        body: AlimentosGrid(), // Utiliza el widget AlimentosGrid
-      ),
+      home: AlimentosGridPage(), // Utiliza el widget AlimentosGridPage
     ));
 
-/* 
-
-Ejemplo de la lógica a seguir en el BACK para conectar con BBDD.
-
-Modelo de datos:
-
-class Alimento {
-  final String id;
-  final String titulo;
-  final String imageUrl;
-
-  Alimento({
-    required this.id,
-    required this.titulo,
-    required this.imageUrl,
-  });
+class AlimentosGridPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'ITEMS',
+          style: TextStyle(
+            fontSize: 40,
+            letterSpacing: 1,
+            fontWeight: FontWeight.w300,
+          ),
+        ),
+        centerTitle: true,
+      ),
+      body: AlimentosGrid(), // Utiliza el widget AlimentosGrid
+    );
+  }
 }
-
-Future<List<Alimento>> getAlimentosFromFirebase() async {
-  // Lógica para recuperar datos de Firebase
-}
-
-*/
 
 class AlimentosGrid extends StatelessWidget {
   @override
@@ -50,14 +33,18 @@ class AlimentosGrid extends StatelessWidget {
         crossAxisSpacing: 8,
         mainAxisSpacing: 8,
         childAspectRatio: 1,
-        
       ),
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
         return GestureDetector(
           onTap: () {
-            // Acción a realizar cuando se hace clic en la caja de alimento
-            print('Caja de alimentos clicleada');
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) =>
+                    AlimentosDetallePage(), // Navega a la página de detalles
+              ),
+            );
           },
           child: Container(
             decoration: index == 0
@@ -67,18 +54,13 @@ class AlimentosGrid extends StatelessWidget {
                           'https://ianvalentino.com/material/Verduras.png'),
                       fit: BoxFit.fitWidth,
                     ),
-                    border: Border.symmetric(horizontal: BorderSide(color: Colors.black.withOpacity(0.5)), vertical: BorderSide(color: Colors.black.withOpacity(0.5)))
-                    
                   )
-                  
                 : null, // Primera caja para ejemplo (Verduras)
             child: Column(
-              mainAxisAlignment: MainAxisAlignment
-                  .end, 
+              mainAxisAlignment: MainAxisAlignment.end,
               children: [
                 Container(
                   color: Colors.white,
-                  
                   padding: EdgeInsets.fromLTRB(
                       70, 8, 70, 20), // Padding left: 8, right: 8, bottom: 16
                   child: Text(
@@ -88,13 +70,26 @@ class AlimentosGrid extends StatelessWidget {
                       color: Colors.black,
                     ),
                   ),
-                  
                 ),
               ],
             ),
           ),
         );
       },
+    );
+  }
+}
+
+class AlimentosDetallePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Detalle del Alimento'),
+      ),
+      body: Center(
+        child: Text('Contenido del detalle del alimento'),
+      ),
     );
   }
 }
