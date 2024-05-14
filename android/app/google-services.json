@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "405917008307",
+    "firebase_url": "https://base-de-datos-acbc4-default-rtdb.firebaseio.com",
+    "project_id": "base-de-datos-acbc4",
+    "storage_bucket": "base-de-datos-acbc4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405917008307:android:2f4f1ae5291d272c214bc6",
+        "android_client_info": {
+          "package_name": "com.example.tfg"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405917008307-72jm8967nlst35u0jgmul63hmd7l9te3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDs0SdgnjMH2qWYyFwzpKL3Fvc-7JwgEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405917008307-72jm8967nlst35u0jgmul63hmd7l9te3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:405917008307:android:f6c112f1ec41b156214bc6",
+        "android_client_info": {
+          "package_name": "com.gourmet.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "405917008307-72jm8967nlst35u0jgmul63hmd7l9te3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDs0SdgnjMH2qWYyFwzpKL3Fvc-7JwgEU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "405917008307-72jm8967nlst35u0jgmul63hmd7l9te3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
