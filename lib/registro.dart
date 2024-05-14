@@ -45,7 +45,7 @@ class Registro extends StatelessWidget {
               SizedBox(height: 80),
               ElevatedButton(
                 onPressed: () {
-                  // Aquí puedes realizar alguna acción de guardar
+                  // accion de guardar
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
@@ -56,7 +56,7 @@ class Registro extends StatelessWidget {
                 ),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 20),
-                  backgroundColor: Color.fromARGB(255, 204, 167, 0),
+                  backgroundColor: Color.fromARGB(255, 113, 185, 244),
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
@@ -66,7 +66,7 @@ class Registro extends StatelessWidget {
               SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pop(); // Volver a la pantalla anterior
+                  Navigator.of(context).pop(); 
                 },
                 child: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
@@ -76,7 +76,7 @@ class Registro extends StatelessWidget {
                 ),
                 style: ElevatedButton.styleFrom(
                   padding: EdgeInsets.symmetric(horizontal: 20),
-                  backgroundColor: Color.fromARGB(255, 204, 167, 1),
+                  backgroundColor: Color.fromARGB(255, 113, 185, 244),
                   minimumSize: Size(double.infinity, 50),
                   shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
